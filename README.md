@@ -1,67 +1,139 @@
-# NodeJS / Fastify / TS starter template 🚀
+# Code Companion Node.js TypeScript Template
 
-## Running the server
+This repository provides a template for building Fastify-based Node.js applications using TypeScript. It includes a pre-configured setup for development, testing, linting, and deployment.
 
-### Initial steps
+## Features
 
-- Install [nvm](https://github.com/nvm-sh/nvm)
-- Run nvm use / nvm install to add the correct node version.
-- Run npm i
-- Copy the .env.example file and fill in your desired env vars.
+- **Fastify Framework**: A fast and low-overhead web framework for Node.js.
+- **TypeScript**: Strongly typed JavaScript for better developer experience.
+- **Environment Configuration**: `.env` support via `dotenv`.
+- **Testing**: Pre-configured with `node:test` and `supertest`.
+- **Linting**: Code linting and formatting using Biome.
+- **Docker Support**: Dockerfile for containerized deployment.
+- **GitHub Actions**: CI/CD pipeline for building, linting, and testing.
+- **Dependabot**: Automated dependency updates.
 
-## Start the server
+## Getting Started
 
-Run `npm run dev`
+### Prerequisites
 
-## Adding routes
+- [Node.js](https://nodejs.org/) (version `22.15.0` recommended, see `.nvmrc`)
+- [Docker](https://www.docker.com/) (optional, for containerized deployment)
 
-This template uses `@fastify/autoload` to load routes. Please look at [their documentation](https://github.com/fastify/fastify-autoload) to extend this functionality
+### Installation
 
-## Testing
+1. Use this repository as a template:
 
-Tests use the default [nodejs test runner](https://nodejs.org/api/test.html).
+   - Click the **"Use this template"** button on the [GitHub repository page](https://github.com/CodeCompanionBE/code-companion-node-ts-template).
+   - Create a new repository based on this template.
 
-## CI/CD
+2. Clone your newly created repository:
 
-### Github actions
+   ```bash
+   git clone ...
+   cd your-repo-name
+   ```
 
-A default config for github actions has been added to this repository which will build, lint and test your code.
+3. Install dependencies:
 
-## Dependabot
+   ```bash
+   npm install
+   ```
 
-A default config for dependabot has been added to check for security vulnerabilities on a weekly basis.
+4. Copy the example environment file and configure it:
 
+   ```bash
+   cp .env.example .env
+   ```
 
-## Used packages 
+### Development
 
-### [Typescript](https://github.com/microsoft/TypeScript)
+Start the development server with hot-reloading:
 
-TypeScript adds optional types to JavaScript that support tools for large-scale JavaScript applications for any browser, for any host, on any OS. TypeScript compiles to readable, standards-based JavaScript. 
+```bash
+npm run dev
+```
 
-### [Fastify](https://github.com/fastify/fastify)
+The server will run on `http://localhost:3000` by default.
 
-Fast framework for setting up HTTP api's
+### Testing
 
-Included plugins:
+Run the test suite:
 
-- @fastify/autoload
-  - Used to [setup routes](#adding-routes)
+```bash
+npm test
+```
 
-### [Biome](https://github.com/eslint/eslint)
+### Linting
 
-Enforces code styles.
+Lint the codebase:
 
-Included plugins:
+```bash
+npm run lint
+```
 
-- eslint-config-airbnb-typescript
-- eslint-config-prettier
-- eslint-plugin-import
-- eslint-plugin-prettier
+### Docker
 
-### [Prettier](https://github.com/prettier/prettier)
+Build the Docker image:
 
-Automatic code formatting handled through the .prettierrc file.
+```bash
+npm run docker:build
+```
 
-### [dotenv](https://github.com/motdotla/dotenv)
+Run the Docker container:
 
-Loads variables into process.env from a .env file
+```bash
+npm run docker:run
+```
+
+### CI/CD
+
+This repository includes a GitHub Actions workflow for building, linting, and testing the application. The workflow is triggered on pushes and pull requests to the `main` branch.
+
+## Project Structure
+
+```
+.
+├── src
+│   ├── routes          # Fastify route definitions
+│   ├── server.ts       # Fastify server setup
+│   └── index.ts        # Application entry point
+├── .github
+│   └── workflows       # GitHub Actions workflows
+├── .vscode             # VS Code settings
+├── Dockerfile          # Docker configuration
+├── package.json        # Project metadata and scripts
+├── tsconfig.json       # TypeScript configuration
+└── .env.example        # Example environment variables
+```
+
+## Scripts
+
+- `npm run dev`: Start the development server.
+- `npm test`: Run tests.
+- `npm run lint`: Lint the codebase.
+- `npm run docker:build`: Build the Docker image.
+- `npm run docker:run`: Run the Docker container.
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Commit your changes with clear and concise messages.
+4. Submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Author
+
+Created by [Niels Van den Broeck](https://github.com/CodeCompanionBE).
+
+## Acknowledgments
+
+- [Fastify](https://www.fastify.io/) for the web framework.
+- [TypeScript](https://www.typescriptlang.org/) for type safety.
+- [Docker](https://www.docker.com/) for containerization.
