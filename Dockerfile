@@ -1,5 +1,5 @@
 ARG PORT=3000
-FROM node:22.12.0
+FROM node:22.15.0-slim
 
 ENV PORT=3000
 WORKDIR /usr/src/app

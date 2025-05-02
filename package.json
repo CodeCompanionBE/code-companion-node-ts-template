@@ -15,16 +15,16 @@
   "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@types/supertest": "^6.0.2",
-    "dotenv": "^16.4.7",
-    "node-test-junit-reporter": "^1.1.5",
-    "nodemon": "^3.1.9",
-    "supertest": "^7.0.0",
+    "@types/supertest": "^6.0.3",
+    "dotenv": "^16.5.0",
+    "node-test-junit-reporter": "^2.0.1",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@fastify/autoload": "^6.0.3",
+    "@fastify/autoload": "^6.3.0",
     "fastify": "^5.2.0"
   }
 }
