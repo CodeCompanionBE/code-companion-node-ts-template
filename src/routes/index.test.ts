@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 
 import request from 'supertest';
 
-import server from '../server';
+import server from '../server.js';
 
 const RESOURCE_URI = '/';
 

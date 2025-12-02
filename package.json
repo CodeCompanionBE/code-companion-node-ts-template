@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon -e ts,json,env --exec ts-node --files -r dotenv/config src/index.ts",
-    "test": "LOG_LEVEL=error node -r ts-node/register --test src/**/*.test.ts",
+    "test": "npm run build && LOG_LEVEL=error node --test dist/**/*.test.js",
     "lint": "biome lint src",
     "build": "tsc -p tsconfig.json",
     "docker:build": "docker build --build-arg PORT=3000 -t appointment-slots .",
@@ -16,6 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@types/node": "^24.10.1",
     "@types/supertest": "^6.0.3",
     "dotenv": "^16.5.0",
     "node-test-junit-reporter": "^2.0.1",
@@ -27,5 +28,6 @@
   "dependencies": {
     "@fastify/autoload": "^6.3.0",
     "fastify": "^5.2.0"
-  }
+  },
+  "type": "module"
 }
