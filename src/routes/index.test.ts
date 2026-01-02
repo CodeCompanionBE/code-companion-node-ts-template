@@ -1,5 +1,5 @@
-import { describe, before, test } from 'node:test';
 import assert from 'node:assert/strict';
+import { before, describe, test } from 'node:test';
 
 import request from 'supertest';
 
