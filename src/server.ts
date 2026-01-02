@@ -9,7 +9,7 @@ const server = Fastify({
 });
 
 server.register(autoLoad, {
-  dir: path.join(__dirname, 'routes'),
+  dir: path.join(import.meta.dirname, 'routes'),
 });
 
 export default server;
