@@ -8,8 +8,9 @@
     "dev": "node --watch -r dotenv/config src/index.ts",
     "test": "LOG_LEVEL=error node --test src/**/*.test.ts",
     "lint": "biome lint src",
+    "build": "rimraf dist && tsc && cp package*.json dist",
     "docker:build": "docker build --build-arg PORT=3000 -t code-companion-node-ts-template .",
-    "docker:run": "docker run -p  code-companion-node-ts-template"
+    "docker:run": "docker run -p 3000:3000 code-companion-node-ts-template"
   },
   "keywords": [],
   "author": "Niels Van den broeck",
@@ -19,6 +20,7 @@
     "@types/supertest": "^6.0.3",
     "dotenv": "^17.2.3",
     "node-test-junit-reporter": "^2.0.1",
+    "rimraf": "^6.1.2",
     "supertest": "^7.1.0",
     "typescript": "^5.9.3"
   },
