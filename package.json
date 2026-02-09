@@ -16,7 +16,7 @@
   "author": "Niels Van den broeck",
   "license": "MIT",
   "devDependencies": {
-    "@biomejs/biome": "^2.3.13",
+    "@biomejs/biome": "^2.3.14",
     "@types/supertest": "^6.0.3",
     "dotenv": "^17.2.3",
     "node-test-junit-reporter": "^2.0.1",
